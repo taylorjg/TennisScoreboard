@@ -7,6 +7,8 @@ repo as a vehicle for learning/practising the following technologies:
 * React
 * RxJS
 * MongoDB
+* Node.js / Express
+* REST APIs
 
 ## TODO
 
@@ -17,7 +19,7 @@ Following is an outline of what I intend to implement.
 * Very basic UI that can display a single game
 * A couple of buttons to manually score points for player 1 / player 2
 * Support the ability to enter a series of points and then click a button to replay them
-* Use of RxJS to repley the points
+* Use of RxJS to replay the points
 
 ### Phase 2
 
