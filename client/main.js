@@ -1,5 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
-import Jon from "./jon";
+import Scoreboard from "./components/scoreboard";
+import ScoringButtons from "./components/scoringButtons";
 
-render(<Jon />, document.getElementById("app"));
+render(
+    <div>
+        <Scoreboard />
+        <ScoringButtons />
+    </div>,
+    document.getElementById("app"));

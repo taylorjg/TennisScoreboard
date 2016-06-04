@@ -4,11 +4,12 @@
 I plan to re-work my earlier [TennisKataJavaScript](https://github.com/taylorjg/TennisKataJavaScript)
 repo as a vehicle for learning/practising the following technologies: 
 
-* React
-* RxJS
-* MongoDB
+* [React](https://facebook.github.io/react/)
+* [RxJS](https://github.com/Reactive-Extensions/RxJS)
+* [MongoDB](https://docs.mongodb.com/ecosystem/drivers/node-js/)
 * Node.js / Express
 * REST APIs
+* [ES2015](https://babeljs.io/docs/learn-es2015/)
 
 ## TODO
 
@@ -41,4 +42,5 @@ Following is an outline of what I intend to implement.
 * [Grand Slam Point-by-Point Data, 2011-15](https://github.com/JeffSackmann/tennis_slam_pointbypoint)
 * [Sequential point-by-point data for tens of thousands of pro matches](https://github.com/JeffSackmann/tennis_pointbypoint)
 * https://www.jayway.com/2015/03/04/using-react-with-ecmascript-6/
+* https://github.com/clauderic/react-infinite-calendar
 * https://github.com/taylorjg/TennisKataJavaScript
