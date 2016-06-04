@@ -16,7 +16,7 @@ Following is an outline of what I intend to implement.
 
 ### Phase 1
 
-* Very basic UI that can display a single game
+* Very basic UI that can display a single game/points
 * A couple of buttons to manually score points for player 1 / player 2
 * Support the ability to enter a series of points and then click a button to replay them
 * Use of RxJS to replay the points
@@ -27,8 +27,8 @@ Following is an outline of what I intend to implement.
 * Populate MongoDB with archived point-by-point data for a bunch of real matches
 * Add REST APIs to make this data available to the client
 * Support the ability to choose a match and replay it
-* Support the abikity to enter the names of the players
-* Support the abikity to enter the names of the length of the match (3 or 5 sets)
+* Support the ability to enter the names of the players
+* Support the ability to enter the length of the match (3 or 5 sets)
 
 ### Phase 3
 
