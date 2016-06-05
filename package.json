@@ -1,0 +1,29 @@
+{
+  "name": "tennisscoreboard",
+  "version": "1.0.0",
+  "description": "I plan to re-work my earlier [TennisKataJavaScript](https://github.com/taylorjg/TennisKataJavaScript) repo as a vehicle for learning/practising the following technologies:",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "babel-preset-es2015": "^6.9.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "redux": "^3.5.2",
+    "vinyl-source-stream": "^1.1.0",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taylorjg/TennisScoreboard.git"
+  },
+  "author": "",
+  "homepage": "https://github.com/taylorjg/TennisScoreboard"
+}

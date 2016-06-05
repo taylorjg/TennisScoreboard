@@ -11,15 +11,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'P1':
-            return {
-                player1Score: state.player1Score + 1,
-                player2Score: state.player2Score
-            };
+            return Object.assign({}, state, { player1Score: state.player1Score + 1 });
         case 'P2':
-            return {
-                player1Score: state.player1Score,
-                player2Score: state.player2Score + 1
-            };
+            return Object.assign({}, state, { player2Score: state.player2Score + 1 });
         default:
             return state;
     }
