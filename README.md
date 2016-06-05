@@ -17,13 +17,14 @@ Following is an outline of what I intend to implement.
 
 ### Phase 1
 
-* Very basic UI that can display a single game/points
+* Very basic UI that can display points for a single game
 * A couple of buttons to manually score points for player 1 / player 2
 * Support the ability to enter a series of points and then click a button to replay them
 * Use of RxJS to replay the points
 
 ### Phase 2
 
+* Extend the UI to support games
 * Extend the UI to support sets
 * Populate MongoDB with archived point-by-point data for a bunch of real matches
 * Add REST APIs to make this data available to the client
@@ -43,4 +44,5 @@ Following is an outline of what I intend to implement.
 * [Sequential point-by-point data for tens of thousands of pro matches](https://github.com/JeffSackmann/tennis_pointbypoint)
 * https://www.jayway.com/2015/03/04/using-react-with-ecmascript-6/
 * https://github.com/clauderic/react-infinite-calendar
-* https://github.com/taylorjg/TennisKataJavaScript
+* http://michalzalecki.com/use-rxjs-with-react/
+* https://github.com/airbnb/javascript/tree/master/react
