@@ -14,16 +14,16 @@ export default class ScoreboardComponent extends React.Component {
                     <tbody>
                         <tr>
                             <td>Player 1</td>
-                            <td>30</td>
+                            <td>{this.props.value.player1Score}</td>
                         </tr>
                         <tr>
                             <td>Player 2</td>
-                            <td>40</td>
+                            <td>{this.props.value.player2Score}</td>
                         </tr>
                     </tbody>
                 </table>
-                <button>Player 1 point</button>
-                <button>Player 2 point</button>
+                <button onClick={this.props.onPlayer1}>Player 1 point</button>
+                <button onClick={this.props.onPlayer2}>Player 2 point</button>
             </div>);
     }
 }

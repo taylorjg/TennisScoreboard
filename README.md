@@ -45,4 +45,7 @@ Following is an outline of what I intend to implement.
 * https://www.jayway.com/2015/03/04/using-react-with-ecmascript-6/
 * https://github.com/clauderic/react-infinite-calendar
 * http://michalzalecki.com/use-rxjs-with-react/
-* https://github.com/airbnb/javascript/tree/master/react
+* [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+* [File and folder naming convention for React.js components](https://gist.github.com/koistya/d7a507438c741ee6adb5)
+* http://redux.js.org/
+* http://redux.js.org/docs/basics/UsageWithReact.html
