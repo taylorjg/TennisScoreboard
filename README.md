@@ -5,7 +5,11 @@ I plan to re-work my earlier [TennisKataJavaScript](https://github.com/taylorjg/
 repo as a vehicle for learning/practising the following technologies: 
 
 * [React](https://facebook.github.io/react/)
-* [RxJS](https://github.com/Reactive-Extensions/RxJS)
+* Data flow architectures:
+    * [Flux](https://facebook.github.io/react/docs/flux-overview.html)
+    * [RefluxJS](https://github.com/reflux/refluxjs)
+    * [Redux](http://redux.js.org/)
+    * [RxJS](https://github.com/Reactive-Extensions/RxJS)
 * [MongoDB](https://docs.mongodb.com/ecosystem/drivers/node-js/)
 * Node.js / Express
 * REST APIs
@@ -17,8 +21,9 @@ Following is an outline of what I intend to implement.
 
 ### Phase 1
 
-* Very basic UI that can display points for a single game
-* A couple of buttons to manually score points for player 1 / player 2
+* ~~Very basic UI that can display points for a single game (e.g. 1, 2, 3, etc.)~~
+* ~~Add a couple of buttons to manually score points for player 1 / player 2~~
+* Show correct game points (e.g. 15, 30, 40 instead of 1, 2, 3) 
 * Support the ability to enter a series of points and then click a button to replay them
 * Use of RxJS to replay the points
 
@@ -49,3 +54,5 @@ Following is an outline of what I intend to implement.
 * [File and folder naming convention for React.js components](https://gist.github.com/koistya/d7a507438c741ee6adb5)
 * http://redux.js.org/
 * http://redux.js.org/docs/basics/UsageWithReact.html
+* http://babeljs.io/docs/plugins/preset-stage-2/
+* http://stackoverflow.com/questions/36327096/vscode-linter-es6-es7-babel-linter

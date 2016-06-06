@@ -10,10 +10,10 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'P1':
-            return Object.assign({}, state, { player1Score: state.player1Score + 1 });
-        case 'P2':
-            return Object.assign({}, state, { player2Score: state.player2Score + 1 });
+        case 'PLAYER1_POINT':
+            return { ...state, player1Score: state.player1Score + 1};
+        case 'PLAYER2_POINT':
+            return { ...state, player2Score: state.player2Score + 1};
         default:
             return state;
     }
@@ -21,8 +21,8 @@ const reducer = (state = initialState, action) => {
 
 const store = createStore(reducer);
 
-const onPlayer1 = () => store.dispatch({ type: 'P1' });
-const onPlayer2 = () => store.dispatch({ type: 'P2' });
+const onPlayer1 = () => store.dispatch({ type: 'PLAYER1_POINT' });
+const onPlayer2 = () => store.dispatch({ type: 'PLAYER2_POINT' });
 const contentElement = document.getElementById('content'); 
 const myrender = () => render(
     <Scoreboard
