@@ -20,7 +20,7 @@ const scoreboardApp = (state = initialState, action) => {
     }
 }
 
-const mapStateToProps = state => ({ ...state });
+const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
     onPlayer1Point: () => dispatch({ type: 'PLAYER1_POINT' }),
