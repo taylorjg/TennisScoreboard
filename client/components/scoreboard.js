@@ -13,23 +13,17 @@ function Scoreboard(props) {
                 <tbody>
                     <tr>
                         <td>Player 1</td>
-                        <td>{props.value.player1Score}</td>
+                        <td>{props.player1Score}</td>
                     </tr>
                     <tr>
                         <td>Player 2</td>
-                        <td>{props.value.player2Score}</td>
+                        <td>{props.player2Score}</td>
                     </tr>
                 </tbody>
             </table>
-            <button onClick={props.onPlayer1}>Player 1 point</button>
-            <button onClick={props.onPlayer2}>Player 2 point</button>
+            <button onClick={props.onPlayer1Point}>Player 1 point</button>
+            <button onClick={props.onPlayer2Point}>Player 2 point</button>
         </div>);
-}
-
-Scoreboard.propTypes = {
-    value: React.PropTypes.object.isRequired,
-    onPlayer1: React.PropTypes.func.isRequired,
-    onPlayer2: React.PropTypes.func.isRequired
 }
 
 export default Scoreboard;
