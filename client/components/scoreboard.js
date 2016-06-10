@@ -23,6 +23,7 @@ function Scoreboard(props) {
             </table>
             <button onClick={props.onPlayer1Point}>Player 1 point</button>
             <button onClick={props.onPlayer2Point}>Player 2 point</button>
+            <button onClick={props.onReset}>Reset</button>
         </div>
     );
 }
