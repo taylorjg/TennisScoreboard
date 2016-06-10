@@ -15,6 +15,9 @@ const scoreboardApp = (state = initialState, action) => {
             return { ...state, player1Score: state.player1Score + 1 };
         case 'PLAYER2_POINT':
             return { ...state, player2Score: state.player2Score + 1 };
+        case 'REPLAY_POINTS':
+            console.log('REPLAY_POINTS - points: %s', action.points);
+            return state;
         case 'RESET':
             return initialState;
         default:
@@ -27,6 +30,7 @@ const mapStateToProps = state => state;
 const mapDispatchToProps = dispatch => ({
     onPlayer1Point: () => dispatch({ type: 'PLAYER1_POINT' }),
     onPlayer2Point: () => dispatch({ type: 'PLAYER2_POINT' }),
+    onReplayPoints: points => dispatch({ type: 'REPLAY_POINTS', points }),
     onReset: () => dispatch({ type: 'RESET' })
 });
 
