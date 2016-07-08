@@ -54,9 +54,9 @@ function formatGamePoints(state) {
 const scoreboardApp = (state = initialState, action) => {
     switch (action.type) {
         case 'PLAYER1_POINT':
-            return formatGamePoints({ ...state, player1Score: state.player1Score + 1 });
+            return { ...state, player1Score: state.player1Score + 1 };
         case 'PLAYER2_POINT':
-            return formatGamePoints({ ...state, player2Score: state.player2Score + 1 });
+            return { ...state, player2Score: state.player2Score + 1 };
         case 'REPLAY_POINTS':
             console.log(`REPLAY_POINTS points: ${action.points}`);
             return state;
@@ -67,7 +67,7 @@ const scoreboardApp = (state = initialState, action) => {
     }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = formatGamePoints;
 
 const mapDispatchToProps = dispatch => ({
     onPlayer1Point: () => dispatch({ type: 'PLAYER1_POINT' }),
