@@ -16,11 +16,11 @@ class Scoreboard extends React.Component {
                             <tbody>
                                 <tr>
                                     <td>Player 1</td>
-                                    <td>{this.props.player1Score}</td>
+                                    <td>{this.props.player1PointsText}</td>
                                 </tr>
                                 <tr>
                                     <td>Player 2</td>
-                                    <td>{this.props.player2Score}</td>
+                                    <td>{this.props.player2PointsText}</td>
                                 </tr>
                             </tbody>
                         </table>
