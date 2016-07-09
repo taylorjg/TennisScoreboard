@@ -25,8 +25,8 @@ class Scoreboard extends React.Component {
                                 </tr>
                                 <tr>
                                     <td>Player 2</td>
-                                    <td>{this.props.player1SetsText}</td>
-                                    <td>{this.props.player1GamesText}</td>
+                                    <td>{this.props.player2SetsText}</td>
+                                    <td>{this.props.player2GamesText}</td>
                                     <td>{this.props.player2PointsText}</td>
                                 </tr>
                             </tbody>

@@ -11,7 +11,6 @@ class Game {
     get isWon() {
         return this.winner !== null;
     }
-    // isTieBreak: bool (or have a separate class that extends Game ?)
 }
 
 function partitionPoints(points) {
