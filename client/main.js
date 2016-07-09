@@ -45,7 +45,6 @@ function formatGamePoints(state) {
     }
 
     return {
-        ...state,
         player1PointsText: player1PointsText,
         player2PointsText: player2PointsText
     };
