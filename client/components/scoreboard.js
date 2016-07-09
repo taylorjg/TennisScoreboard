@@ -6,21 +6,27 @@ class Scoreboard extends React.Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-md-offset-2 col-md-8">
+                    <div className="col-md-offset-3 col-md-6">
                         <table className="table table-condensed">
                             <thead>
                                 <tr>
                                     <th>Player</th>
+                                    <th>Sets</th>
+                                    <th>Games</th>
                                     <th>Points</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Player 1</td>
+                                    <td>{this.props.player1SetsText}</td>
+                                    <td>{this.props.player1GamesText}</td>
                                     <td>{this.props.player1PointsText}</td>
                                 </tr>
                                 <tr>
                                     <td>Player 2</td>
+                                    <td>{this.props.player1SetsText}</td>
+                                    <td>{this.props.player1GamesText}</td>
                                     <td>{this.props.player2PointsText}</td>
                                 </tr>
                             </tbody>
@@ -40,9 +46,17 @@ class Scoreboard extends React.Component {
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8">
                         <hr />
-                        <input type="text" size="60" ref={node => this.points = node}></input>
+                        <input 
+                            type="text"
+                            size="60"
+                            title="Enter a string of 1's and 2's"
+                            ref={node => this.points = node} />
                         {spacer}
-                        <button type="button" onClick={() => this.props.onReplayPoints(this.points.value)} className="btn btn-default btn-sm">Replay points</button>
+                        <button 
+                            type="button"
+                            className="btn btn-primary btn-sm"
+                            onClick={() => this.props.onReplayPoints(this.points.value)}
+                        >Replay points</button>
                     </div>
                 </div>
             </div>

@@ -3,52 +3,32 @@ import { render } from 'react-dom';
 import { createStore} from 'redux';
 import { connect, Provider } from 'react-redux';
 import Scoreboard from './components/Scoreboard';
+import Player from './models/player';
+import Point from './models/point';
+import Game from './models/game';
+import formatter from './models/formatter';
 
 const initialState = {
     player1Score: 0,
     player2Score: 0,
-    player1PointsText: '',
-    player2PointsText: ''
+    player1: new Player('Player 1'),
+    player2: new Player('Player 2'),
+    game: new Game([])
 };
 
-function formatGamePoints(state) {
-
-    const LOVE_TEXT = '';
-    const FIFTEEN_TEXT = '15';
-    const THIRTY_TEXT = '30';
-    const FORTY_TEXT = '40';
-    const ADVANTAGE_TEXT = 'AD';
-
-    const POINTS_TO_TEXT = [
-        LOVE_TEXT,
-        FIFTEEN_TEXT,
-        THIRTY_TEXT,
-        FORTY_TEXT
-    ];
-
-    let player1PointsText = '';
-    let player2PointsText = '';
-
-    if (state.player1Score + state.player2Score >= 6) {
-        if (state.player1Score === state.player2Score) {
-            player1PointsText = FORTY_TEXT;
-            player2PointsText = FORTY_TEXT;
-        }
-        else {
-            player1PointsText = state.player1Score > state.player2Score ? ADVANTAGE_TEXT : '';
-            player2PointsText = state.player2Score > state.player1Score ? ADVANTAGE_TEXT : '';
-        }
-    }
-    else {
-        player1PointsText = POINTS_TO_TEXT[state.player1Score];
-        player2PointsText = POINTS_TO_TEXT[state.player2Score];
-    }
-
-    return {
-        player1PointsText: player1PointsText,
-        player2PointsText: player2PointsText
-    };
-}
+const player1 = new Player('player1');
+const player2 = new Player('player2');
+const p1 = new Point(player1);
+const p2 = new Point(player2);
+const p3 = new Point(player1);
+const p4 = new Point(player1);
+const p5 = new Point(player1);
+const g1 = new Game([p1, p2, p3, p4, p5]);
+console.log(`g1.points: ${JSON.stringify(g1.points)}`);
+console.log(`g1.pointsFor(player1): ${JSON.stringify(g1.pointsFor(player1))}`);
+console.log(`g1.pointsFor(player2): ${JSON.stringify(g1.pointsFor(player2))}`);
+console.log(`g1.isWon: ${g1.isWon}`);
+console.log(`g1.winner: ${JSON.stringify(g1.winner)}`);
 
 const scoreboardApp = (state = initialState, action) => {
     switch (action.type) {
@@ -66,7 +46,7 @@ const scoreboardApp = (state = initialState, action) => {
     }
 }
 
-const mapStateToProps = formatGamePoints;
+const mapStateToProps = formatter.formatGamePoints;
 
 const mapDispatchToProps = dispatch => ({
     onPlayer1Point: () => dispatch({ type: 'PLAYER1_POINT' }),
@@ -78,7 +58,7 @@ const mapDispatchToProps = dispatch => ({
 const ScoreboardContainer = connect(mapStateToProps, mapDispatchToProps)(Scoreboard);
 
 render(
-    <Provider store={createStore(scoreboardApp)}>
+    <Provider store={createStore(scoreboardApp) }>
         <ScoreboardContainer />
     </Provider>,
     document.getElementById('content')
