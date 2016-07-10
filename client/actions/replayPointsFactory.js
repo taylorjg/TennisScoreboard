@@ -1,9 +1,9 @@
 import * as Rx from 'rxjs';
-import * as actions from './actions';
+import * as actions from '.';
 
 const re = /[12]/;
 
-const replayPoints = (points, period = 500) =>
+const replayPointsFactory = (points, period = 500) =>
     () => {
         const playerPointActions = points
             .split('')
@@ -15,4 +15,4 @@ const replayPoints = (points, period = 500) =>
         return Rx.Observable.zip(action$, interval$, (action, _) => action);
     };
 
-export default replayPoints;
+export default replayPointsFactory;

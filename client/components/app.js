@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import formatter from '../models/formatter';
 import * as actions from '../actions';
-import replayPoints from '../replayPoints';
 
 class App extends React.Component {
     render() {
@@ -78,6 +77,6 @@ class App extends React.Component {
     }
 }
 
-App = connect(formatter.formatGamePoints, { ...actions, replayPoints })(App);
+App = connect(formatter.formatGamePoints, actions)(App);
 
 export default App;
