@@ -50,19 +50,26 @@ class App extends React.Component {
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8">
                         <hr />
-                        <input 
+                        <input
                             type="text"
                             size="60"
                             title="Enter a string of 1's and 2's"
                             placeholder="e.g. 11122"
                             ref={node => this.points = node} />
                         {spacer}
+                        <input
+                            type="text"
+                            size="10"
+                            title="Enter an interval to wait between points (in ms)"
+                            placeholder="e.g. 500"
+                            ref={node => this.interval = node} />
+                        {spacer}
                         <button 
                             type="button"
                             className="btn btn-primary btn-sm"
                             onClick={() => {
-                                const dispatchNames$ = replayPoints(this.points.value);
-                                dispatchNames$.doOnNext(dispatchName => this.props[dispatchName]()).subscribe();
+                                const action$ = replayPoints(this.points.value, this.interval.value || 500);
+                                action$.doOnNext(action => this.props[action]()).subscribe();
                             }}
                         >Replay points</button>
                     </div>
