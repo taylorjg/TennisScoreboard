@@ -54,6 +54,7 @@ class App extends React.Component {
                             type="text"
                             size="60"
                             title="Enter a string of 1's and 2's"
+                            placeholder="e.g. 11122"
                             ref={node => this.points = node} />
                         {spacer}
                         <button 
