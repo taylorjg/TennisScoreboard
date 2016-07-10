@@ -9,23 +9,18 @@ const initialState = {
 };
 
 const scoreboard = (state = initialState, action) => {
+
+    const addPoint = (state, player) => {
+        if (state.game.isWon) return state;
+        const point = new Point(player);
+        return { ...state, game: new Game([...state.game.points, point]) };
+    }
+
     switch (action.type) {
         case 'PLAYER1_POINT':
-            {
-                if (state.game.isWon) return state;
-                let ps = state.game.points.slice();
-                ps.push(new Point(state.player1));
-                return { ...state, game: new Game(ps) };
-            }
+            return addPoint(state, state.player1);
         case 'PLAYER2_POINT':
-            {
-                if (state.game.isWon) return state;
-                let ps = state.game.points.slice();
-                ps.push(new Point(state.player2));
-                return { ...state, game: new Game(ps) };
-            }
-        case 'REPLAY_POINTS':
-            return state;
+            return addPoint(state, state.player2);
         case 'RESET':
             return initialState;
         default:

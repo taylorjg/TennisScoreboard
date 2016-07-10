@@ -40,11 +40,11 @@ class App extends React.Component {
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8">
                         <hr />
-                        <button type="button" onClick={this.props.onPlayer1Point} className="btn btn-default btn-sm">Player 1 point</button>
+                        <button type="button" onClick={this.props.player1Point} className="btn btn-default btn-sm">Player 1 point</button>
                         {spacer}
-                        <button type="button" onClick={this.props.onPlayer2Point} className="btn btn-default btn-sm">Player 2 point</button>
+                        <button type="button" onClick={this.props.player2Point} className="btn btn-default btn-sm">Player 2 point</button>
                         {spacer}
-                        <button type="button" onClick={this.props.onReset} className="btn btn-default btn-sm btn-danger">Reset</button>
+                        <button type="button" onClick={this.props.reset} className="btn btn-default btn-sm btn-danger">Reset</button>
                     </div>
                 </div>
                 <div className="row">
@@ -72,18 +72,6 @@ class App extends React.Component {
     }
 }
 
-const mapStateToProps = formatter.formatGamePoints;
-
-const mapDispatchToProps = {
-    onPlayer1Point: actions.player1Point,
-    onPlayer2Point: actions.player2Point,
-    onReplayPoints: actions.replayPoints,
-    onReset: actions.reset
-};
-
-App = connect(
-    mapStateToProps,
-    mapDispatchToProps)
-(App);
+App = connect(formatter.formatGamePoints, actions)(App);
 
 export default App;
