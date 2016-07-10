@@ -7,7 +7,6 @@ repo as a vehicle for learning/practising the following technologies:
 * [React](https://facebook.github.io/react/)
 * Data flow architectures:
     * [Flux](https://facebook.github.io/react/docs/flux-overview.html)
-    * [RefluxJS](https://github.com/reflux/refluxjs)
     * [Redux](http://redux.js.org/)
     * [RxJS](https://github.com/Reactive-Extensions/RxJS)
 * [MongoDB](https://docs.mongodb.com/ecosystem/drivers/node-js/)
@@ -24,8 +23,8 @@ Following is an outline of what I intend to implement.
 * ~~Very basic UI that can display points for a single game (e.g. 1, 2, 3, etc.)~~
 * ~~Add a couple of buttons to manually score points for player 1 / player 2~~
 * ~~Show correct game points (e.g. 15, 30, 40 instead of 1, 2, 3)~~ 
-* Support the ability to enter a series of points and then click a button to replay them
-* Use of RxJS to replay the points
+* ~~Support the ability to enter a series of points and then click a button to replay them~~
+* ~~Use RxJS to replay the points~~
 
 ### Phase 2
 
@@ -56,3 +55,4 @@ Following is an outline of what I intend to implement.
 * http://redux.js.org/docs/basics/UsageWithReact.html
 * http://babeljs.io/docs/plugins/preset-stage-2/
 * http://stackoverflow.com/questions/36327096/vscode-linter-es6-es7-babel-linter
+* https://medium.com/@benlesh/redux-observable-ec0b00d2eb52
