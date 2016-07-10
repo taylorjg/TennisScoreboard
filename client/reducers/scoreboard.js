@@ -25,16 +25,7 @@ const scoreboard = (state = initialState, action) => {
                 return { ...state, game: new Game(ps) };
             }
         case 'REPLAY_POINTS':
-            {
-                // const actions = action.points
-                //     .split('')
-                //     .map(Number)
-                //     .map(n => (n === 1) ? 'PLAYER1_POINT' : 'PLAYER2_POINT');
-                // console.log(`REPLAY_POINTS actions: ${actions}`);
-                // const actions$ = Rx.Observable.from(actions);
-                // actions$.doOnNext(type => dispatch({type})).subscribe();
-                return state;
-            }
+            return state;
         case 'RESET':
             return initialState;
         default:

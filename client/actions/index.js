@@ -1,23 +1,16 @@
-const player1Point = () => ({
+export const player1Point = () => ({
     type: 'PLAYER1_POINT'
 });
 
-const player2Point = () => ({
+export const player2Point = () => ({
     type: 'PLAYER2_POINT'
 });
 
-const replayPoints = (points) => ({
+export const replayPoints = (points) => ({
     type: 'REPLAY_POINTS',
     points
 });
 
-const reset = () => ({
+export const reset = () => ({
     type: 'RESET'
 });
-
-export default {
-    player1Point,
-    player2Point,
-    replayPoints,
-    reset
-};

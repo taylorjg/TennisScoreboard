@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import formatter from '../models/formatter';
-import actions from '../actions';
+import * as actions from '../actions';
+import replayPoints from '../replayPoints';
 
 class App extends React.Component {
     render() {
@@ -58,7 +59,10 @@ class App extends React.Component {
                         <button 
                             type="button"
                             className="btn btn-primary btn-sm"
-                            onClick={() => this.props.onReplayPoints(this.points.value)}
+                            onClick={() => {
+                                const dispatchNames$ = replayPoints(this.points.value);
+                                dispatchNames$.doOnNext(dispatchName => this.props[dispatchName]()).subscribe();
+                            }}
                         >Replay points</button>
                     </div>
                 </div>
