@@ -8,7 +8,7 @@ const initialState = {
     game: new Game([])
 };
 
-const scoreboard = (state = initialState, action) => {
+const appReducer = (state = initialState, action) => {
 
     const addPoint = (state, player) => {
         if (state.game.isWon) return state;
@@ -28,4 +28,4 @@ const scoreboard = (state = initialState, action) => {
     }
 }
 
-export default scoreboard;
+export default appReducer;
