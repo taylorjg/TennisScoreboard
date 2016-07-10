@@ -12,12 +12,14 @@ const scoreboard = (state = initialState, action) => {
     switch (action.type) {
         case 'PLAYER1_POINT':
             {
+                if (state.game.isWon) return state;
                 let ps = state.game.points.slice();
                 ps.push(new Point(state.player1));
                 return { ...state, game: new Game(ps) };
             }
         case 'PLAYER2_POINT':
             {
+                if (state.game.isWon) return state;
                 let ps = state.game.points.slice();
                 ps.push(new Point(state.player2));
                 return { ...state, game: new Game(ps) };
