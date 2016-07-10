@@ -68,8 +68,7 @@ class App extends React.Component {
                             type="button"
                             className="btn btn-primary btn-sm"
                             onClick={() => {
-                                const action$ = replayPoints(this.points.value, this.interval.value || undefined);
-                                action$.do(action => this.props[action]()).subscribe();
+                                this.props.replayPoints(this.points.value, this.interval.value || undefined);
                             }}
                         >Replay points</button>
                     </div>
@@ -79,6 +78,6 @@ class App extends React.Component {
     }
 }
 
-App = connect(formatter.formatGamePoints, actions)(App);
+App = connect(formatter.formatGamePoints, { ...actions, replayPoints })(App);
 
 export default App;

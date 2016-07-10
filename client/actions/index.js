@@ -9,3 +9,8 @@ export const player2Point = () => ({
 export const reset = () => ({
     type: 'RESET'
 });
+
+// export const replayPoints = points => ({
+//     type: 'REPLAY_POINTS',
+//     points
+// });
