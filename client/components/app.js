@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import formatter from '../models/formatter';
 import actions from '../actions';
 
-class Scoreboard extends React.Component {
+class App extends React.Component {
     render() {
         const spacer = ' ';
         return (
@@ -76,9 +76,9 @@ const mapDispatchToProps = {
     onReset: actions.reset
 };
 
-const App = connect(
+App = connect(
     mapStateToProps,
     mapDispatchToProps)
-(Scoreboard);
+(App);
 
 export default App;
