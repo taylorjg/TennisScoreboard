@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import formatter from '../models/formatter';
 
 class Scoreboard extends React.Component {
     render() {
@@ -64,4 +66,15 @@ class Scoreboard extends React.Component {
     }
 }
 
-export default Scoreboard;
+const mapStateToProps = formatter.formatGamePoints;
+
+const mapDispatchToProps = dispatch => ({
+    onPlayer1Point() { dispatch({ type: 'PLAYER1_POINT' }) },
+    onPlayer2Point() { dispatch({ type: 'PLAYER2_POINT' }) },
+    onReplayPoints(points) { dispatch({ type: 'REPLAY_POINTS', points }) },
+    onReset() { dispatch({ type: 'RESET' }) }
+});
+
+const App = connect(mapStateToProps, mapDispatchToProps)(Scoreboard);
+
+export default App;
