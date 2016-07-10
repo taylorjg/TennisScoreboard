@@ -1,10 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore} from 'redux';
-import scoreboard from './reducers/scoreboard';
+import configureStore from './configureStore';
 import Root from './components/root';
 
-const store = createStore(scoreboard);
+const store = configureStore();
 
 render(
     <Root store={store} />,
