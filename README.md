@@ -23,7 +23,7 @@ Following is an outline of what I intend to implement.
 
 * ~~Very basic UI that can display points for a single game (e.g. 1, 2, 3, etc.)~~
 * ~~Add a couple of buttons to manually score points for player 1 / player 2~~
-* Show correct game points (e.g. 15, 30, 40 instead of 1, 2, 3) 
+* ~~Show correct game points (e.g. 15, 30, 40 instead of 1, 2, 3)~~ 
 * Support the ability to enter a series of points and then click a button to replay them
 * Use of RxJS to replay the points
 
