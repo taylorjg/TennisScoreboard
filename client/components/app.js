@@ -68,8 +68,8 @@ class App extends React.Component {
                             type="button"
                             className="btn btn-primary btn-sm"
                             onClick={() => {
-                                const action$ = replayPoints(this.points.value, this.interval.value || 500);
-                                action$.doOnNext(action => this.props[action]()).subscribe();
+                                const action$ = replayPoints(this.points.value, this.interval.value || undefined);
+                                action$.do(action => this.props[action]()).subscribe();
                             }}
                         >Replay points</button>
                     </div>

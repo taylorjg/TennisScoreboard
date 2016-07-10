@@ -55,4 +55,6 @@ Following is an outline of what I intend to implement.
 * http://redux.js.org/docs/basics/UsageWithReact.html
 * http://babeljs.io/docs/plugins/preset-stage-2/
 * http://stackoverflow.com/questions/36327096/vscode-linter-es6-es7-babel-linter
+* https://github.com/redux-observable/redux-observable
 * https://medium.com/@benlesh/redux-observable-ec0b00d2eb52
+* http://reactivex.io/rxjs/
