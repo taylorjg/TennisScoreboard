@@ -70,6 +70,12 @@ class App extends React.Component {
                                 this.props.replayPoints(this.points.value, this.interval.value || undefined);
                             }}
                         >Replay points</button>
+                        {spacer}
+                        <button 
+                            type="button"
+                            className="btn btn-primary btn-sm"
+                            onClick={this.props.cancelReplay}
+                        >Cancel Replay</button>
                     </div>
                 </div>
             </div>

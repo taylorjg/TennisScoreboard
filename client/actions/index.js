@@ -13,3 +13,7 @@ export const reset = () => ({
 });
 
 export const replayPoints = replayPointsFactory;
+
+export const cancelReplay = () => ({
+    type: 'CANCEL_REPLAY'
+});
