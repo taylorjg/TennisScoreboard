@@ -2,17 +2,17 @@
 ## Description
 
 I plan to re-work my earlier [TennisKataJavaScript](https://github.com/taylorjg/TennisKataJavaScript)
-repo as a vehicle for learning/practising the following technologies: 
+repo as a vehicle for learning/practising the following: 
 
 * [React](https://facebook.github.io/react/)
-* Data flow architectures:
-    * [Flux](https://facebook.github.io/react/docs/flux-overview.html)
-    * [Redux](http://redux.js.org/)
-    * [RxJS](https://github.com/Reactive-Extensions/RxJS)
+* Data flow architecture:
+    * [redux](http://redux.js.org/)
+    * [redux-observable](https://github.com/redux-observable/redux-observable)
+    * [rxjs](https://github.com/ReactiveX/rxjs)
 * [MongoDB](https://docs.mongodb.com/ecosystem/drivers/node-js/)
-* Node.js / Express
-* REST APIs
-* [ES2015](https://babeljs.io/docs/learn-es2015/)
+* [Node.js](https://nodejs.org) / [Express](http://expressjs.com/)
+* [REST APIs](http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming)
+* [ECMAScript 2015](https://babeljs.io/docs/learn-es2015/)
 
 ## TODO
 
@@ -25,6 +25,10 @@ Following is an outline of what I intend to implement.
 * ~~Show correct game points (e.g. 15, 30, 40 instead of 1, 2, 3)~~ 
 * ~~Support the ability to enter a series of points and then click a button to replay them~~
 * ~~Use RxJS to replay the points~~
+* Use a form to present the replay points feature
+* Add form validation
+* Add the ability to cancel the replay of points
+* When points are being replayed, disable all buttons except Cancel
 
 #### Screenshot of Phase 1
 
@@ -48,17 +52,24 @@ Following is an outline of what I intend to implement.
 
 ## Links
 
-* [Grand Slam Point-by-Point Data, 2011-15](https://github.com/JeffSackmann/tennis_slam_pointbypoint)
-* [Sequential point-by-point data for tens of thousands of pro matches](https://github.com/JeffSackmann/tennis_pointbypoint)
-* https://www.jayway.com/2015/03/04/using-react-with-ecmascript-6/
-* https://github.com/clauderic/react-infinite-calendar
-* http://michalzalecki.com/use-rxjs-with-react/
-* [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
-* [File and folder naming convention for React.js components](https://gist.github.com/koistya/d7a507438c741ee6adb5)
-* http://redux.js.org/
-* http://redux.js.org/docs/basics/UsageWithReact.html
-* http://babeljs.io/docs/plugins/preset-stage-2/
-* http://stackoverflow.com/questions/36327096/vscode-linter-es6-es7-babel-linter
-* https://github.com/redux-observable/redux-observable
-* https://medium.com/@benlesh/redux-observable-ec0b00d2eb52
-* http://reactivex.io/rxjs/
+* Tennis Data
+    * [Grand Slam Point-by-Point Data, 2011-15](https://github.com/JeffSackmann/tennis_slam_pointbypoint)
+    * [Sequential point-by-point data for tens of thousands of pro matches](https://github.com/JeffSackmann/tennis_pointbypoint)
+* React Examples
+    * [react-infinite-calendar](https://github.com/clauderic/react-infinite-calendar)
+* React Conventions
+    * [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+    * [File and folder naming convention for React.js components](https://gist.github.com/koistya/d7a507438c741ee6adb5)
+* redux
+    * [redux](http://redux.js.org/)
+    * [Usage with React](http://redux.js.org/docs/basics/UsageWithReact.html)
+    * [redux-observable](https://github.com/redux-observable/redux-observable)
+    * [redux-observable is middleware for redux that is inspired by redux-thunk](https://medium.com/@benlesh/redux-observable-ec0b00d2eb52)
+* RxJS 5
+    * [rxjs](https://github.com/ReactiveX/rxjs)
+    * [RxJS 5 Documentation](http://reactivex.io/rxjs/)
+    * [Use RxJS with React](http://michalzalecki.com/use-rxjs-with-react/)
+* Miscellaneous
+    * [Stage 2 preset · Babel](http://babeljs.io/docs/plugins/preset-stage-2/)
+    * [VSCode Linter ES6 ES7 Babel linter](http://stackoverflow.com/questions/36327096/vscode-linter-es6-es7-babel-linter)
+    * [Using React with ECMAScript 2015](https://www.jayway.com/2015/03/04/using-react-with-ecmascript-6/)
