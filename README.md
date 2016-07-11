@@ -26,6 +26,10 @@ Following is an outline of what I intend to implement.
 * ~~Support the ability to enter a series of points and then click a button to replay them~~
 * ~~Use RxJS to replay the points~~
 
+#### Screenshot of Phase 1
+
+![ScreenshotPhase1](screenshots/ScreenshotPhase1.png)
+
 ### Phase 2
 
 * Extend the UI to support games
