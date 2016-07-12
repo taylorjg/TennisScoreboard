@@ -5,7 +5,8 @@ import Game from '../models/game';
 const initialState = {
     player1: new Player('Player 1'),
     player2: new Player('Player 2'),
-    game: new Game([])
+    game: new Game([]),
+    replaying: false
 };
 
 const appReducer = (state = initialState, action) => {

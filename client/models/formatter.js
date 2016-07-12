@@ -57,7 +57,8 @@ function formatGamePoints(state) {
         player1PointsText,
         player2SetsText,
         player2GamesText,
-        player2PointsText
+        player2PointsText,
+        replaying: state.replaying
     };
 }
 

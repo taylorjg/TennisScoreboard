@@ -1,0 +1,6 @@
+export const PLAYER1_POINT = 'PLAYER1_POINT';
+export const PLAYER2_POINT = 'PLAYER2_POINT';
+export const RESET = 'RESET';
+export const START_REPLAYING = 'START_REPLAYING';
+export const END_REPLAYING = 'END_REPLAYING';
+export const CANCEL_REPLAYING = 'CANCEL_REPLAYING';

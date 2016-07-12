@@ -73,9 +73,9 @@ class App extends React.Component {
                         {spacer}
                         <button 
                             type="button"
-                            className="btn btn-primary btn-sm"
-                            onClick={this.props.cancelReplay}
-                        >Cancel Replay</button>
+                            className="btn btn-danger btn-sm"
+                            onClick={this.props.cancelReplaying}
+                        >Cancel</button>
                     </div>
                 </div>
             </div>
