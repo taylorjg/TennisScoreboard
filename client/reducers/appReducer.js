@@ -1,6 +1,5 @@
 import * as types from '../constants/actionTypes';
 import Player from '../models/player';
-import Point from '../models/point';
 import Game from '../models/game';
 
 const initialState = {
@@ -11,18 +10,11 @@ const initialState = {
 };
 
 const appReducer = (state = initialState, action) => {
-
-    const addPoint = (state, player) => {
-        if (state.game.isWon) return state;
-        const point = new Point(player);
-        return { ...state, game: new Game([...state.game.points, point]) };
-    }
-
     switch (action.type) {
         case types.PLAYER1_POINT:
-            return addPoint(state, state.player1);
+            return { ...state, game: state.game.scorePoint(state.player1) };
         case types.PLAYER2_POINT:
-            return addPoint(state, state.player2);
+            return { ...state, game: state.game.scorePoint(state.player2) };
         case types.RESET:
             return initialState;
         case types.START_REPLAYING:

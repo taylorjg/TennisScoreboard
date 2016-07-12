@@ -1,3 +1,6 @@
+import Player from './player';
+import Point from './point';
+
 class Game {
     constructor(points) {
         this.points = points;
@@ -10,6 +13,11 @@ class Game {
     }
     get isWon() {
         return this.winner !== null;
+    }
+    scorePoint(player) {
+        if (this.isWon) return this;
+        const point = new Point(player);
+        return new Game([...this.points, point]);
     }
 }
 
