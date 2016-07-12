@@ -63,11 +63,14 @@ Following is an outline of what I intend to implement.
 * React Conventions
     * [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
     * [File and folder naming convention for React.js components](https://gist.github.com/koistya/d7a507438c741ee6adb5)
-* redux
-    * [redux](http://redux.js.org/)
+* Redux
+    * [Redux](http://redux.js.org/)
     * [Usage with React](http://redux.js.org/docs/basics/UsageWithReact.html)
     * [redux-observable](https://github.com/redux-observable/redux-observable)
     * [redux-observable is middleware for redux that is inspired by redux-thunk](https://medium.com/@benlesh/redux-observable-ec0b00d2eb52)
+* React / Redux Examples
+    * [A Soundcloud client built with React / Redux](https://github.com/andrewngu/sound-redux)
+        * https://soundredux.io/
 * RxJS 5
     * [rxjs](https://github.com/ReactiveX/rxjs)
     * [RxJS 5 Documentation](http://reactivex.io/rxjs/)
