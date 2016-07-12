@@ -27,8 +27,8 @@ Following is an outline of what I intend to implement.
 * ~~Use RxJS to replay the points~~
 * Use a form to present the replay points feature
 * Add form validation
-* Add the ability to cancel the replay of points
-* When points are being replayed, disable all buttons except Cancel
+* ~~Add the ability to cancel the replay of points~~
+* ~~When points are being replayed, disable all buttons except Cancel~~
 
 #### Screenshot of Phase 1
 

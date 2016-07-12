@@ -39,11 +39,26 @@ class App extends React.Component {
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8">
                         <hr />
-                        <button type="button" onClick={this.props.player1Point} className="btn btn-default btn-sm">Player 1 point</button>
+                        <button 
+                            type="button"
+                            className="btn btn-default btn-sm"
+                            onClick={this.props.player1Point}
+                            disabled={this.props.replaying}
+                        >Player 1 point</button>
                         {spacer}
-                        <button type="button" onClick={this.props.player2Point} className="btn btn-default btn-sm">Player 2 point</button>
+                        <button
+                            type="button"
+                            className="btn btn-default btn-sm"
+                            onClick={this.props.player2Point}
+                            disabled={this.props.replaying}
+                        >Player 2 point</button>
                         {spacer}
-                        <button type="button" onClick={this.props.reset} className="btn btn-default btn-sm btn-danger">Reset</button>
+                        <button
+                            type="button"
+                            className="btn btn-default btn-sm btn-danger"
+                            onClick={this.props.reset}
+                            disabled={this.props.replaying}
+                        >Reset</button>
                     </div>
                 </div>
                 <div className="row">
@@ -69,12 +84,14 @@ class App extends React.Component {
                             onClick={() => {
                                 this.props.replayPoints(this.points.value, this.interval.value || undefined);
                             }}
+                            disabled={this.props.replaying}
                         >Replay points</button>
                         {spacer}
                         <button 
                             type="button"
                             className="btn btn-danger btn-sm"
                             onClick={this.props.cancelReplaying}
+                            disabled={!this.props.replaying}
                         >Cancel</button>
                     </div>
                 </div>
