@@ -2,8 +2,12 @@ import Player from './player';
 import Point from './point';
 
 class Game {
-    constructor(points) {
+    constructor(streams, points) {
+        this.streams = streams;
         this.points = points;
+        if (this.isWon) {
+            this.streams.gameWon$.next(this);
+        };
     }
     pointsFor(player) {
         return this.points.filter(p => p.winner === player);
@@ -17,7 +21,8 @@ class Game {
     scorePoint(player) {
         if (this.isWon) return this;
         const point = new Point(player);
-        return new Game([...this.points, point]);
+        this.streams.pointWon$.next(point);
+        return new Game(this.streams, [...this.points, point]);
     }
 }
 
