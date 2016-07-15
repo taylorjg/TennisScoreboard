@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import configureStore from './stores/configureStore';
-import Root from './components/root';
+import Root from './containers/root';
 
 const store = configureStore();
 

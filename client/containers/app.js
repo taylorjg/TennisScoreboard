@@ -2,40 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import formatter from '../models/formatter';
 import * as actions from '../actions';
+import Scoreboard from '../components/Scoreboard';
 
 class App extends React.Component {
     render() {
         const spacer = ' ';
         return (
             <div>
-                <div className="row">
-                    <div className="col-md-offset-3 col-md-6">
-                        <table className="table table-condensed">
-                            <thead>
-                                <tr>
-                                    <th>Player</th>
-                                    <th>Sets</th>
-                                    <th>Games</th>
-                                    <th>Points</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Player 1</td>
-                                    <td>{this.props.player1SetsText}</td>
-                                    <td>{this.props.player1GamesText}</td>
-                                    <td>{this.props.player1PointsText}</td>
-                                </tr>
-                                <tr>
-                                    <td>Player 2</td>
-                                    <td>{this.props.player2SetsText}</td>
-                                    <td>{this.props.player2GamesText}</td>
-                                    <td>{this.props.player2PointsText}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <Scoreboard { ...this.props.scoreboard } />
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8">
                         <hr />
@@ -43,21 +17,21 @@ class App extends React.Component {
                             type="button"
                             className="btn btn-default btn-sm"
                             onClick={this.props.player1Point}
-                            disabled={this.props.replaying}
+                            disabled={this.props.ui.replaying}
                         >Player 1 point</button>
                         {spacer}
                         <button
                             type="button"
                             className="btn btn-default btn-sm"
                             onClick={this.props.player2Point}
-                            disabled={this.props.replaying}
+                            disabled={this.props.ui.replaying}
                         >Player 2 point</button>
                         {spacer}
                         <button
                             type="button"
                             className="btn btn-default btn-sm btn-danger"
                             onClick={this.props.reset}
-                            disabled={this.props.replaying}
+                            disabled={this.props.ui.replaying}
                         >Reset</button>
                     </div>
                 </div>
@@ -84,14 +58,14 @@ class App extends React.Component {
                             onClick={() => {
                                 this.props.replayPoints(this.points.value, this.interval.value || undefined);
                             }}
-                            disabled={this.props.replaying}
+                            disabled={this.props.ui.replaying}
                         >Replay points</button>
                         {spacer}
                         <button 
                             type="button"
                             className="btn btn-danger btn-sm"
                             onClick={this.props.cancelReplaying}
-                            disabled={!this.props.replaying}
+                            disabled={!this.props.ui.replaying}
                         >Cancel</button>
                     </div>
                 </div>

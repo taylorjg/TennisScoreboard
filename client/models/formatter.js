@@ -52,13 +52,17 @@ function formatGamePoints(state) {
     }
 
     return {
-        player1SetsText,
-        player1GamesText,
-        player1PointsText,
-        player2SetsText,
-        player2GamesText,
-        player2PointsText,
-        replaying: state.replaying
+        scoreboard: {
+            player1SetsText,
+            player1GamesText,
+            player1PointsText,
+            player2SetsText,
+            player2GamesText,
+            player2PointsText
+        },
+        ui: {
+            replaying: state.replaying
+        }
     };
 }
 
