@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Scoreboard = props => (
+const ScoreboardPanel = props => (
     <div className="row">
         <div className="col-md-offset-3 col-md-6">
             <table className="table table-condensed">
@@ -31,4 +31,4 @@ const Scoreboard = props => (
     </div>
 )
 
-export default Scoreboard;
+export default ScoreboardPanel;

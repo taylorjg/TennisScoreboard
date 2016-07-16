@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import formatter from '../models/formatter';
 import * as actions from '../actions';
-import Scoreboard from '../components/Scoreboard';
+import ScoreboardPanel from '../components/scoreboardPanel';
 
 class App extends React.Component {
     render() {
         const spacer = ' ';
         return (
             <div>
-                <Scoreboard { ...this.props.scoreboard } />
+                <ScoreboardPanel { ...this.props.scoreboard } />
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8">
                         <hr />
