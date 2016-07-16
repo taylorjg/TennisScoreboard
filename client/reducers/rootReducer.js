@@ -2,7 +2,8 @@ import * as types from '../constants/actionTypes';
 import Player from '../models/player';
 import Game from '../models/game';
 import Streams from '../models/streams';
-import Breakpoints from '../addIns/breakpoints';
+import CurrentServer from '../addins/currentServer';
+import Breakpoints from '../addins/breakpoints';
 
 const streams = new Streams();
 
@@ -15,9 +16,10 @@ const initialState = {
 
 streams.pointWon$.subscribe(point => console.log(`point won by ${point.winner.name}`));
 streams.gameWon$.subscribe(game => console.log(`game won by ${game.winner.name}`));
-const breakpoints = new Breakpoints(streams, initialState.player1, initialState.player2);
+const currentServer = new CurrentServer(streams, initialState.player1, initialState.player2);
+const breakpoints = new Breakpoints(streams, currentServer.currentServer$, initialState.player1, initialState.player2);
 
-const appReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.PLAYER1_POINT:
             return { ...state, game: state.game.scorePoint(state.player1) };
@@ -35,4 +37,4 @@ const appReducer = (state = initialState, action) => {
     }
 }
 
-export default appReducer;
+export default rootReducer;

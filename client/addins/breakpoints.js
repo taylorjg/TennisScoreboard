@@ -1,5 +1,6 @@
 class Breakpoints {
-    constructor(streams, player1, player2) {
+    constructor(streams, currentServer$, player1, player2) {
+        this.currentServer$ = currentServer$;
         this.player1 = player1;
         this.player2 = player2;
         this.player1Points = 0;
@@ -17,14 +18,13 @@ class Breakpoints {
         const p1 = this.player1Points;
         const p2 = this.player2Points;
         console.log(`onPointWon - player1Points: ${p1}; player2Points: ${p2}`);
-        // if (p2 >= 3 && p2 - p1 > 0) {
-        //     console.log('*** BREAKPOINT ***');
-        // }
+        if (p2 >= 3 && p2 > p1) {
+            console.log(`*** BREAKPOINT (${p2 - p1}) ***`);
+        }
     }
     onGameWon(_) {
         this.player1Points = 0;
         this.player2Points = 0;
-        console.log(`onGameWon - player1Points: ${this.player1Points}; player2Points: ${this.player2Points}`);
     }
 };
 

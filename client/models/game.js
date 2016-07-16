@@ -2,7 +2,7 @@ import Player from './player';
 import Point from './point';
 
 class Game {
-    constructor(streams, points) {
+    constructor(streams, points = []) {
         this.streams = streams;
         this.points = points;
         if (this.isWon) {
