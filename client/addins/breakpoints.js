@@ -1,8 +1,9 @@
 class Breakpoints {
-    constructor(streams, currentServer$, player1, player2) {
-        this.currentServer$ = currentServer$;
+    constructor(player1, player2, streams, currentServer$) {
         this.player1 = player1;
         this.player2 = player2;
+        this.streams = streams;
+        this.currentServer$ = currentServer$;
         this.player1Points = 0;
         this.player2Points = 0;
         streams.pointWon$.subscribe(this.onPointWon.bind(this));

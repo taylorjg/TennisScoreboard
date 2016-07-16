@@ -1,7 +1,7 @@
 import * as Rx from 'rxjs';
 
 class CurrentServer {
-    constructor(streams, player1, player2) {
+    constructor(player1, player2, streams) {
         this.player1 = player1;
         this.player2 = player2;
         this.currentServer = player1;

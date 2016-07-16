@@ -21,8 +21,10 @@ function formatGamePoints(state) {
     let player2GamesText = BLANK;
     let player2PointsText = BLANK;
 
-    if (state.game.isWon) {
-        if (state.game.winner === state.player1) {
+    const match = state.match;
+
+    if (match.currentGame.isWon) {
+        if (match.currentGame.winner === match.player1) {
             player1GamesText = "1";
         }
         else {
@@ -30,8 +32,8 @@ function formatGamePoints(state) {
         }
     }
     else {
-        const player1Points = state.game.pointsFor(state.player1).length;
-        const player2Points = state.game.pointsFor(state.player2).length;
+        const player1Points = match.currentGame.pointsFor(match.player1).length;
+        const player2Points = match.currentGame.pointsFor(match.player2).length;
 
         if (player1Points + player2Points >= 6) {
             if (player1Points === player2Points) {

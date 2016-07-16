@@ -1,4 +1,5 @@
 import Player from './player';
+import Point from './point';
 import Game from './game';
 
 class Match {
@@ -13,7 +14,7 @@ class Match {
         const newPoint = new Point(player);
         const newGame = new Game(this.streams, [...this.currentGame.points, newPoint]);
         const newMatch = new Match(this.streams, this.player1, this.player2, newGame);
-        this.streams.pointWon$.next(point);
+        this.streams.pointWon$.next(newPoint);
         return newMatch;
     }
 }
