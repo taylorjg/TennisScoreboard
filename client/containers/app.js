@@ -5,6 +5,7 @@ import * as actions from '../actions';
 import ScoreboardPanel from '../components/scoreboardPanel';
 import ManualPointsPanel from '../components/manualPointsPanel';
 import ReplayPointsPanel from '../components/replayPointsPanel';
+import ReplayMatchPanel from '../components/replayMatchPanel';
 
 class App extends React.Component {
     render() {
@@ -18,6 +19,11 @@ class App extends React.Component {
                     reset={this.props.reset}
                     />
                 <ReplayPointsPanel
+                    { ...this.props.ui }
+                    replayPoints={this.props.replayPoints}
+                    cancelReplaying={this.props.cancelReplaying}
+                    />
+                <ReplayMatchPanel
                     { ...this.props.ui }
                     replayPoints={this.props.replayPoints}
                     cancelReplaying={this.props.cancelReplaying}
